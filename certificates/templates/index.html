@@ -1,0 +1,65 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://pingendo.github.io/templates/blank/theme.css" type="text/css"> </head>
+
+<body>
+  <div class="py-5 section text-center bg-primary text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-white">GERADOR DE CERTIFICADOS</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-faded py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1 class=" pi-item">COMO UTILIZAR ?</h1>
+          <ol class="">
+            <li>Crie um template no MS Word e fonte Arial</li>
+            <li contenteditable="true">No template, deverão existir as tags &lt;nome&gt; e &lt;curso&gt;</li>
+            <li>Preencha o formulário com o nome do curso, a lista de nomes e o arquivo template.&nbsp;</li>
+          </ol>
+          <img class="img-fluid d-block" src="/static/help.PNG" style="width:100%"> </div>
+        <div class="col-md-6">
+          <h1 class="pi-item">Formulário</h1>
+          <form action="{{url_for('home')}}" method="POST" enctype="multipart/form-data">
+            <fieldset class="form-group"> <label for="curso">Nome do Curso</label>
+              <input type="text" class="form-control" id="curso" placeholder="Nome do Curso" name="curso"> </fieldset>
+            <fieldset class="form-group"> <label for="file">Template *.docx</label>
+              <input type="file" class="form-control" id="file" name="file"> </fieldset>
+            <fieldset class="form-group"> <label for="nomes">Lista de Nomes</label> 
+            <textarea class="form-control" rows="13" id="nomes" name="nomes"></textarea> </fieldset>
+            <button type="submit" class="btn btn-primary pull-right">Gerar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5 bg-primary text-center fixed-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <a></a>
+        </div>
+        <div class="col-4">
+          <a></a>
+        </div>
+        <div class="col-4">
+          <a></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+  <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
+</body>
+
+</html>
