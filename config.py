@@ -13,5 +13,4 @@ basedir = os.path.abspath(os.path.dirname(__name__))
 # diretório base da aplicação
 BASE_DIR = basedir
 
-# diretório onde serão armazenadas ass fotos
 UPLOADS = join(join(join(basedir, 'certificates'), 'static'), 'uploads')
